@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <script>
+function validateForm(){
+     let x=document.forms["myForm"]["firstname"].value;
+     if(x==""){
+          alert("name must be filled");
+          return false;
+     }
+     let y=document.forms["myForm"]["lastname"].value;
+ if(y==""){
+          alert("name must be filled");
+          return false;
+     }
+     var z = document.forms["myForm"]["CGPA"].value;
+    if(!z.match(/^\d+/)){
+        {
+        alert("Please only enter numeric characters only  (Allowed input:0-9)")
+        }
+        return false;
+     }
+     var p = document.forms["myForm"]["contact number"].value;
+    if(!p.match(/^\d+/)){
+        {
+        alert("Please only enter numeric characters only  (Allowed input:0-9)")
+        }
+        return false;
+     }
+}
+
+          </script>
+     </head>
+<title>
+Registration Form
+</title>
+<body>
+<style>
+div{text-align: center;}
+</style>
+<div>
+
+</div>
+
+<body style ="background-color:skyblue;text-align:center;">
+
+     <form name="myForm" action="" onsubmit="return validateForm()" method="post">
+
+<h1>Registration Form</h1>
+
+First name:<br>
+<input type="text" name="firstname" >
+<br>
+
+
+Last name:<br>
+<input type="text" name="lastname">
+<br>
+
+
+CGPA :<br>
+<input type="text" name="CGPA" >
+<br>
+
+
+Contact Number:<br>
+<input type="number" name="contact number">
+<br>
+
+
+email-id:<br>
+<input type="text" name = "email-id">
+<br>
+
+DOB:<br>
+<input type="date" name ="Date of Birth">
+<br>
+
+<p>Select your gender</p>
+   <input type="radio"
+     id="g1"
+     name="gender"
+     value="1">
+<label for="gender">Male</label><br>
+  <input type="radio"
+     id="g1"
+     name="gender"
+     value="1">
+<label for="gender">Female</label><br>
+  <input type="radio"
+     id="g1"
+     name="gender"
+     value="1">
+<label for="gender">Others</label><br>
+   
+
+Permanent Address:<br>
+<input type="text" name ="Permanent Address">
+<br>
+
+Temporary Address:<br>
+<input type="text" name ="Temporary Address">
+<br>
+
+Favorite subject:<br>
+<input type="checkbox" name ="fav color">
+<label for="sub">Java</label>
+<br>
+<input type="checkbox" name ="fav color">
+<label for="sub">CSS</label>
+<br>
+<input type="checkbox" name ="fav color">
+<label for="sub">Computing</label>
+<br>
+
+
+<p>select your age:</p>
+     <input type="radio"
+      id="age1"
+      name="age"
+      value="15">
+<label for ="age">0 to 15</label><br>
+      <input type="radio"
+      id="age1"
+      name="age"
+      value="15">
+<label for ="age">15 to 30</label><br>
+
+
+<p>Upload your photo</p>
+<input type ="file" id="myfile" name="filename">
+<br>
+
+<p>Upload your 12th certificate</p>
+<input type ="file" id="myfile" name="filename">
+<br>
+
+
+<p>Intrested Area :</p>
+<select name="drop down">
+<option value ="deep learning" selected>deep learning</option>
+<option value ="Machine Learning" selected>Machine Learning</option>
+<option value ="Cyber Security" selected>Cyber Security</option>
+<option vale="Data Sci" selected>Data Science</option>
+</select>
+<br>
+
+<input type="submit" value="Submit">
+
+</form>
+
+</body>
+</html>
